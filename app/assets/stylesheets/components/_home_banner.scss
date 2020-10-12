@@ -13,4 +13,9 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  h1 {
+    font-family: $title-family;
+    font-size: 60px;
+    letter-spacing: 2px;
+  }
 }

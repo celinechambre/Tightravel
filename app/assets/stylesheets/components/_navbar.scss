@@ -1,11 +1,43 @@
 .navbar {
-  justify-content: space-between;
+	float: left;
+	list-style: none;
+	margin-top: 30px;
+	text-align: center;
 }
 
-.navbar .navbar-collapse {
-  flex-grow: 0;
+.navbar li {
+	display: inline-block;
+	margin-left: 100px;
+	text-align: center;
 }
 
-.navbar .navbar-brand img {
-  width: 40px;
+.navbar li a:link,
+.navbar li a:visited {
+	padding: 8px 0;
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 0.9em;
+	border-bottom: 2px solid transparent; /* We want border exist before hover, but not yet visible.*/
+	transition: border-bottom 0.2s;
 }
+
+.navbar li a:hover,
+.navbar li a:active {
+	border-bottom: 2px solid #216583; /* Visible on hover */
+}
+
+
+// .navbar {
+//   justify-content: space-between;
+//   background-color: blue;
+// }
+
+// .navbar .navbar-collapse {
+//   flex-grow: 0;
+// }
+
+// .navbar .navbar-brand img {
+//   width: 40px;
+// }
+
