@@ -1,0 +1,21 @@
+<div class="container">
+
+  <div class="row">
+    <h2>OUR ARTICLES</h2>
+  </div>
+ 
+  <div class="row">
+    <%= link_to "Add article", new_article_path %>
+  </div>
+
+  <div class="row">
+    <ul>
+      <% @articles.each do |article| %>
+        <li><%= article.title %></li>
+      <% end %>
+    </ul>
+  </div>
+
+</div>
+
+<%= render "shared/article_card" %>
