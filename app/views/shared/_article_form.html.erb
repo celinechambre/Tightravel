@@ -15,7 +15,7 @@
 
     <%= f.input :description, label: "Give a description" %>
 
-    <%#= f.input :photo, as: :file, label: "Show a bit more of your life!", class: "form-control-file" %>
+    <%= f.input :photos, as: :file, input_html: {multiple: true} %>
     <%= f.button :submit , "Submit" %>
   </div>
 <% end %>
