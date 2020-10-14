@@ -1,21 +1,23 @@
-<div class="container">
 
-  <div class="row">
-    <h2>OUR ARTICLES</h2>
-  </div>
- 
-  <div class="row">
-    <%= link_to "Add article", new_article_path %>
-  </div>
-
-  <div class="row">
-    <ul>
-      <% @articles.each do |article| %>
-        <li><%= article.title %></li>
-      <% end %>
-    </ul>
-  </div>
-
-</div>
 
 <%= render "shared/article_card" %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+      <h1>OUR ARTICLES</h1>
+
+      <div class="row">
+        <%= link_to "Add article", new_article_path %>
+      </div>
+
+      <ul class="list-group">
+        <% @articles.each do |article| %>
+          <li class="list-group-item">
+            <%= link_to article.title, article_path(article) %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
