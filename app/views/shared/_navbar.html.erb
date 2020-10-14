@@ -1,35 +1,20 @@
-<!-- <div class="navbar navbar-expand-sm navbar-light navbar-transparent">
-">
-  <a class="navbar-brand" href="#">
-    <img src="#" alt="LOGO" >
-  </a>
+
+<nav class="navbar navbar-expand-lg <%= background ? "transparent" : "normal"%>">
+
+  <i class="ml-2"><%#= link_to (image_tag('Logo Maker 2020_08_19_09_45_39.png')), root_path, class: "logo" %></i>
+
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Articles</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Map</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
-      </li>
+    <ul class="navbar-nav mr-auto nav-list">
+      <li class="nav-item active"><%= link_to "TIGHTRAVEL", root_path%></li>
+      <li class="nav-item active"><%=link_to "ARTICLES", articles_path%></li>
+      <li class="nav-item active"><%=link_to "MAP", articles_path%></li>
+      <li class="nav-item"><%=link_to "ABOUT", about_path%></li>
     </ul>
   </div>
-</div> -->
+</nav>
 
-<!-- <div class="container">
-<div class="navbar">
-  <ul>
-    <li class="nav-item"><a href="#">LOGO</a></li>
-    <li class="nav-item"><a href="#">Articles</a></li>
-    <li class="nav-item"><a href="#">Map</a></li>
-    <li class="nav-item"><a href="#">About</a></li>
-  </ul>
-</div>
-</div>
- -->
