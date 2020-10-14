@@ -1,0 +1,21 @@
+<% if @article.errors.any? %>
+  <h2>The following errors prevented the article from saving:</h2>
+  <ul>
+   <% @article.errors.full_messages.each do |msg|%>
+     <li><%= msg %></li>
+   <% end %>
+  </ul>
+<% end %>
+
+<%= simple_form_for @article do |f| %>
+  <div class="form-group text-left">
+    <%= f.input :title, label: "What is the title of your article?", placeholder: "Patagonia" %>
+
+    <%= f.input :location, label: "What is the location?", placeholder: "Argentina" %>
+
+    <%= f.input :description, label: "Give a description" %>
+
+    <%#= f.input :photo, as: :file, label: "Show a bit more of your life!", class: "form-control-file" %>
+    <%= f.button :submit , "Submit" %>
+  </div>
+<% end %>

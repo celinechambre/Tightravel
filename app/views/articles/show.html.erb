@@ -15,6 +15,7 @@
         </tbody>
       </table>
       <%= link_to 'Edit', edit_article_path %>
+      <%= link_to 'Delete', article_path, method: :delete, data: {confirm: "Are you sure?"} %>
       <%= link_to "Back to our articles", articles_path %>
       <%= link_to "Back to home page", root_path %>
     </div>
