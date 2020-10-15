@@ -6,8 +6,11 @@
   z-index: 2;
   padding: 10px auto;
   li {
-  	text-align: center;
-  	margin-right: 30%;
+    padding-top: 1em;
+  	margin-right: 0;
+    font-family: "Alegreya Sans";
+    font-weight: 200;
+    letter-spacing: 2px;
   }
   &.transparent {
     background-color: transparent !important;
@@ -16,7 +19,6 @@
 	  padding: 8px 0;
 	  color: white;
 	  text-decoration: none;
-	  text-transform: uppercase;
 	  border-bottom: 2px solid transparent; /* We want border exist before hover, but not yet visible.*/
 	  transition: border-bottom 0.2s;
        }
@@ -32,12 +34,12 @@
     border-bottom: 1px solid #dbd4bc;
     background-color: white;
     position: sticky;
+    color: #216583;
+    padding-bottom: 1em;
     li a:link,
     li a:visited {
 	  padding: 8px 0;
-	  color: rgba(0, 0, 0, 0.5);
 	  text-decoration: none;
-	  text-transform: uppercase;
 	  border-bottom: 2px solid transparent; /* We want border exist before hover, but not yet visible.*/
 	  transition: border-bottom 0.2s;
        }
@@ -49,4 +51,8 @@
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
       }
   }
+}
+
+.navbar .container, .navbar .container-fluid, .navbar .container-sm, .navbar .container-md, .navbar .container-lg, .navbar .container-xl {
+  justify-content: space-evenly;
 }
