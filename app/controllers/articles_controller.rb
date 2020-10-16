@@ -48,6 +48,6 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:title, :location, :description, photos: [ ])
+    params.require(:article).permit(:title, :location, :description, photos: [])
   end
 end

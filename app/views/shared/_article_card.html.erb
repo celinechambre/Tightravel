@@ -1,13 +1,13 @@
 <div class="row">
-<% @articles.each do |article| %>
-  <div class="card article col-12 col-md-10 col-lg-6">  
-    <%= cl_image_tag article.photos[0].key, height: 250, crop: :fill, class: "card-img-top" %>
-      <div class="card-body">
-      	<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-        <h5 class="card-title"><%= article.title %></h5>
-        <p class="card-text"><%= article.description %></p>
-        <%= link_to "Read more", article_path(article), class: "card-button" %>
-      </div>
-  </div>
-<% end %>
-  </div>
+  <% @articles.each do |article| %>
+    <div class="card article col-12 col-md-10 col-lg-6 mb-4">  
+      <%= cl_image_tag article.photos[0].key, height: 250, crop: :fill, class: "card-img-top" %>
+        <div class="card-body">
+      	  <p class="card-text"><small class="text-muted"><%= article.created_at.strftime("%B %d %Y") %></small></p>
+          <h5 class="card-title"><%= article.title %></h5>
+          <p class="card-text"><%= truncate(article.description, :length => 150) %></p>
+          <%= link_to "Read more", article_path(article), class: "card-button" %>
+        </div>
+    </div>
+  <% end %>
+</div>

@@ -16,7 +16,7 @@
   </head>
 
   <body>
-    <%= render "shared/navbar", background: params[:controller] == "pages" && params[:action] == "home" %>
+    <%= render "shared/navbar", background: params[:controller] == "pages" && params[:action] == "home" || params[:controller] == "articles" && params[:action] == "show"%>
 
     <% flash.each do |name, msg| %>
       <ul>
