@@ -1,16 +1,14 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <h1>OUR ARTICLES</h1>
+<div class="index container">
+  <h4>DISCOVER OUR TRAVELS</h4> 
 
-      <div class="row">
-        <%= link_to "Add article", new_article_path %>
-      </div>
+  <div class="container">
+    <%= render "shared/article_card" %>
+  </div>
 
-
-      <%= render "shared/article_card" %>
-
+  <div class="container mt-4">
+    <div class="d-flex">
+      <%= link_to "Back to home page", root_path, class: "small-button" %>
+      <%= link_to "Add article", new_article_path, class: "small-button" %>
     </div>
   </div>
-  <%= link_to "Back to home page", root_path %>
 </div>

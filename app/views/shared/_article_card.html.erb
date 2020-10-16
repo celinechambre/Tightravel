@@ -1,16 +1,13 @@
-<div class="container">
-
 <div class="row">
-    
-  <div class="col-12 col-lg-6">
-    <% @articles.each do |article| %>
-    <%= cl_image_tag article.photos[0].key, height: 300, width: 400, crop: :fill, class: "" %>
-      <h5 class=""><%= article.title %></h5>
-      <p class=""><%= article.description %></p>
-      <%= link_to "", article_path(article) %>
-    <% end %>
+<% @articles.each do |article| %>
+  <div class="card article col-12 col-md-10 col-lg-6">  
+    <%= cl_image_tag article.photos[0].key, height: 250, crop: :fill, class: "card-img-top" %>
+      <div class="card-body">
+      	<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <h5 class="card-title"><%= article.title %></h5>
+        <p class="card-text"><%= article.description %></p>
+        <%= link_to "Read more", article_path(article), class: "card-button" %>
+      </div>
   </div>
-</div>
-
-</div>
-
+<% end %>
+  </div>
